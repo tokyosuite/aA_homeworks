@@ -11,7 +11,7 @@ class Queue
     @queue.push(el)
   end
 
-  def dequeue(el)
+  def dequeue
     @queue.shift
   end
 
