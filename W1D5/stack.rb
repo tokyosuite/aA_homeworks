@@ -2,7 +2,7 @@ class Stack
   attr_reader :stack 
 
   def initialize
-    @stack
+    @stack = []
   end
 
   def push(el)
