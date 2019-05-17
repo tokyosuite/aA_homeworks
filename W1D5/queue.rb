@@ -1,8 +1,10 @@
 # Queue follows FIFO principle
 
 class Queue
+  attr_reader :queue
+
   def initialize
-    @queue
+    @queue = [] 
   end
 
   def enqueue(el)
