@@ -16,6 +16,6 @@ class Queue
   end
 
   def peek
-    @queue.last
+    @queue.first
   end
 end
