@@ -1,6 +1,6 @@
 # Map class can be implemented using a 2D array
 # Keys should always be unique 
-#
+
 class Map
   attr_reader :my_map
 
@@ -18,11 +18,11 @@ class Map
   end
 
   def get(key)
-    @my_map.select{|x| x[0] == key}
+    @my_map.select{|x| x[0] == key}.flatten
   end
 
   def delete(key)
-    @my_map.delete_if{|k, v| k == key}
+    @my_map.delete_if{|k, v| k == key}[1]
   end
 
   def show
