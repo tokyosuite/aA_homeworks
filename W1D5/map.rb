@@ -2,6 +2,8 @@
 # Keys should always be unique 
 #
 class Map
+  attr_reader :my_map
+
   def initialize
    @my_map = []
   end
