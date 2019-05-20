@@ -10,14 +10,19 @@ class Simon
   end
 
   def play
-
+    take_turn until @game_over == true 
+    if @game_over == true 
+      game_over_message 
+      reset_game 
+    end
   end
 
   def take_turn
-    show_sequence()
+    show_sequence
+    require_sequence
     if game_over == false 
       round_success_message
-      sequence_length += 1
+      @sequence_length += 1
     end
   end
 
@@ -26,7 +31,10 @@ class Simon
   end
 
   def require_sequence
-
+    a = gets.chomp.split
+    if a != @seq 
+      @game_over = true 
+    end
   end
 
   def add_random_color
@@ -34,11 +42,11 @@ class Simon
   end
 
   def round_success_message
-
+    puts "YAY!"
   end
 
   def game_over_message
-
+    puts "OH NO!"
   end
 
   def reset_game
